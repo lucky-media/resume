@@ -1,0 +1,130 @@
+title: Experience
+fields:
+  -
+    handle: items
+    field:
+      collapse: accordion
+      sets:
+        new_experience:
+          display: 'New Experience'
+          fields:
+            -
+              handle: job_title
+              field:
+                input_type: text
+                antlers: false
+                display: 'Job Title'
+                type: text
+                icon: text
+                width: 33
+                listable: hidden
+                instructions_position: above
+                read_only: false
+                validate:
+                  - required
+            -
+              handle: employer
+              field:
+                input_type: text
+                antlers: false
+                display: Employer
+                type: text
+                icon: text
+                width: 33
+                listable: hidden
+                instructions_position: above
+                read_only: false
+            -
+              handle: location
+              field:
+                input_type: text
+                antlers: false
+                display: Location
+                type: text
+                icon: text
+                width: 33
+                listable: hidden
+                instructions_position: above
+                read_only: false
+            -
+              handle: logo
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 1
+                display: Logo
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                read_only: false
+            -
+              handle: start_date
+              field:
+                mode: single
+                time_enabled: false
+                time_seconds_enabled: false
+                full_width: false
+                inline: false
+                columns: 1
+                rows: 1
+                display: 'Start Date'
+                type: date
+                icon: date
+                width: 50
+                listable: hidden
+                instructions_position: above
+                read_only: false
+                instructions: 'Start date for the job.'
+            -
+              handle: end_date
+              field:
+                mode: single
+                time_enabled: false
+                time_seconds_enabled: false
+                full_width: false
+                inline: false
+                columns: 1
+                rows: 1
+                display: 'End Date'
+                type: date
+                icon: date
+                instructions: 'Leave blank to indicate that you are still working here.'
+                width: 50
+                listable: hidden
+                instructions_position: above
+                read_only: false
+            -
+              handle: description
+              field:
+                always_show_set_button: false
+                buttons:
+                  - bold
+                  - italic
+                  - anchor
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: true
+                link_noreferrer: true
+                target_blank: true
+                reading_time: false
+                fullscreen: true
+                allow_source: false
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                display: Description
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                read_only: false
+      display: Items
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      read_only: false

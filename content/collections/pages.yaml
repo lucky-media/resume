@@ -1,0 +1,7 @@
+title: Pages
+layout: layout
+revisions: false
+route: "{parent_uri}/{slug}"
+sort_dir: asc
+structure:
+  root: true

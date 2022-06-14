@@ -1,0 +1,14 @@
+<section>
+    {{ partial:components.title_with_dot }}
+
+    <ul class="flex flex-col items-start md:flex-row md:flex-wrap md:-m-4">
+        {{ skills }}
+            <li class="py-4 md:px-4">
+                <p
+                    class="px-6 py-2 font-medium transition duration-700 ease-in-out bg-gray-100 rounded-xl text-primary-500 dark:text-primary-300 dark:bg-gray-700">
+                    {{ value }}
+                </p>
+            </li>
+        {{ /skills }}
+    </ul>
+</section>

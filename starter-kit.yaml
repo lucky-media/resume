@@ -1,0 +1,27 @@
+export_paths:
+  - content/assets
+  - content/collections/pages/john-doe.md
+  - content/collections/pages.yaml
+  - content/trees/collections/pages.yaml
+  - config/statamic/assets.php
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/css/tailwind.css
+  - resources/js/site.js
+  - resources/icons
+  - resources/views/components
+  - resources/views/partials
+  - resources/views/resume
+  - resources/views/sets
+  - resources/views/layout.antlers.html
+  - public/assets
+  - public/css
+  - public/fonts
+  - public/js
+  - public/svg
+  - package.json
+  - tailwind.config.js
+  - webpack.mix.js
+  - README.md
+dependencies:
+  mitydigital/iconamic: ^1.0

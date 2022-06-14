@@ -1,0 +1,50 @@
+<section>
+    {{ partial:components.title_with_dot }}
+
+    <div class="grid gap-4 xl:grid-cols-3">
+        {{ items }}
+            <div
+                class="flex flex-col justify-between p-6 transition duration-700 ease-in-out bg-gray-100 rounded-md dark:bg-gray-700">
+                <div class="flex items-center">
+                    {{ if logo }}
+                        <div class="w-8 h-8 overflow-hidden rounded shrink-0">
+                            {{ partial:components/picture :image="logo" cover="true" }}
+                        </div>
+                    {{ /if }}
+
+                    {{ if university }}
+                        <p class="ml-2 text-xl font-medium text-gray-800 dark:text-gray-200">
+                            {{ university }}
+                        </p>
+                    {{ /if }}
+                </div>
+
+                <div>
+                    <p class="mt-4 text-sm font-bold text-gray-700 dark:text-gray-200">
+                        {{ degree }}
+                    </p>
+
+                    <div class="flex flex-row items-center">
+                        {{ if start_date }}
+                            <span
+                                class="text-xs font-medium text-gray-600 dark:text-gray-300">
+                                {{ start_date iso_format="MMM YYYY" }}</span>
+                        {{ /if }}
+
+                        {{ if start_date and end_date }}
+                            <span
+                                class="px-0.5 text-gray-600 dark:text-gray-300">-</span>
+                        {{ /if }}
+
+                        {{ if end_date }}
+                            <p class="text-xs font-medium text-gray-600 dark:text-gray-300">
+                                {{ end_date iso_format="MMM YYYY" }}
+                            </p>
+                        {{ /if }}
+                    </div>
+                </div>
+            </div>
+        {{/items}}
+    </div>
+
+</section>

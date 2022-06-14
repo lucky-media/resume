@@ -1,0 +1,9 @@
+{
+    "name": "lucky-media/resume",
+    "extra": {
+        "statamic": {
+            "name": "Resume",
+            "description": "Resume starter kit"
+        }
+    }
+}

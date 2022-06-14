@@ -1,0 +1,87 @@
+title: Courses
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: courses
+    field:
+      collapse: false
+      sets:
+        new_set:
+          display: 'New Set'
+          fields:
+            -
+              handle: course_name
+              field:
+                input_type: text
+                antlers: false
+                display: 'Course Name'
+                type: text
+                icon: text
+                width: 50
+                listable: hidden
+                instructions_position: above
+                read_only: false
+                validate:
+                  - required
+            -
+              handle: institution
+              field:
+                input_type: text
+                antlers: false
+                display: Institution
+                type: text
+                icon: text
+                width: 50
+                listable: hidden
+                instructions_position: above
+                read_only: false
+            -
+              handle: start_date
+              field:
+                mode: single
+                time_enabled: false
+                time_seconds_enabled: false
+                full_width: false
+                inline: false
+                columns: 1
+                rows: 1
+                display: 'Start Date'
+                type: date
+                icon: date
+                width: 50
+                listable: hidden
+                instructions_position: above
+                read_only: false
+            -
+              handle: end_date
+              field:
+                mode: single
+                time_enabled: false
+                time_seconds_enabled: false
+                full_width: false
+                inline: false
+                columns: 1
+                rows: 1
+                display: 'End Date'
+                type: date
+                icon: date
+                width: 50
+                listable: hidden
+                instructions_position: above
+                read_only: false
+      display: Courses
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      read_only: false

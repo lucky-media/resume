@@ -1,0 +1,29 @@
+<section>
+    {{ partial:components.title_with_dot size="h1" color="gray" }}
+
+    <div class="grid gap-4 xl:grid-cols-3">
+        {{ courses }}
+            <div
+                class="flex flex-col justify-between px-6 py-4 transition duration-700 ease-in-out bg-gray-100 rounded dark:bg-gray-700">
+                <p class="mb-3 text-xl font-bold text-gray-800 dark:text-gray-200">
+                    {{ course_name }}
+                </p>
+
+                <div>
+                    {{ if institution }}
+                        <p class="text-sm font-medium text-gray-700 dark:text-gray-200">
+                            {{ institution }}
+                        </p>
+                    {{ /if }}
+
+                    {{ if start_date && end_date }}
+                        <span
+                            class="flex text-xs text-gray-600 dark:text-gray-300">
+                            {{ start_date iso_format="MMM YYYY" }} - {{ end_date iso_format="MMM YYYY" }}
+                        </span>
+                    {{ /if }}
+                </div>
+            </div>
+        {{ /courses }}
+    </div>
+</section>

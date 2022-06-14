@@ -1,0 +1,26 @@
+<div class="flex md:flex-col flex-row md:items-start items-center border-b-2 border-grey-200 pb-8">
+  {{ if image }}
+    <div class="md:w-full w-20 h-20 md:h-64 md:rounded-3xl rounded-full overflow-hidden">
+      {{ partial:components/picture :image="image" cover="true" }}
+    </div>
+  {{ /if }}
+
+  <div class="md:ml-0 ml-2 md:mt-8">
+    <p class="mb-2 text-3xl font-medium text-gray-700 md:text-5xl dark:text-gray-100">
+      {{ title }}
+    </p>
+
+    {{ if short_bio }}
+      <p
+        class="md:text-2xl text-lg font-medium text-transparent bg-clip-text bg-gradient-to-r from-primary-450 to-secondary-400">
+        {{ short_bio }}
+      </p>
+    {{ /if }}
+  </div>
+</div>
+
+<div class="divide-y-2 divide-gray-200 space-y-8">
+  {{ sections }}
+    {{ partial src="sets/{type}" }}
+  {{ /sections }}
+</div>

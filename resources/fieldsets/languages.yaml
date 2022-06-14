@@ -1,0 +1,64 @@
+title: Languages
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      read_only: false
+  -
+    handle: languages
+    field:
+      fields:
+        -
+          handle: icon
+          field:
+            path: icons/flags
+            path_helper: default
+            display: Icon
+            type: iconamic
+            icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M19 9h19.84c2.76 0 5 2.24 5 5v24.84c0 2.76-2.24 5-5 5H14c-2.76 0-5-2.24-5-5V19c0-5.52 4.48-10 10-10ZM61.16 9H81c5.52 0 10 4.48 10 10v19.84c0 2.76-2.24 5-5 5H61.16c-2.76 0-5-2.24-5-5V14c0-2.76 2.24-5 5-5ZM14 56.16h24.84c2.76 0 5 2.24 5 5V86c0 2.76-2.24 5-5 5H19c-5.52 0-10-4.48-10-10V61.16c0-2.76 2.24-5 5-5ZM61.16 56.16H86c2.76 0 5 2.24 5 5V81c0 5.52-4.48 10-10 10H61.16c-2.76 0-5-2.24-5-5V61.16c0-2.76 2.24-5 5-5Z" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:6px"/></svg>'
+            width: 25
+            listable: hidden
+            instructions_position: above
+            read_only: false
+        -
+          handle: name
+          field:
+            input_type: text
+            antlers: false
+            display: Name
+            type: text
+            icon: text
+            width: 50
+            listable: hidden
+            instructions_position: above
+            read_only: false
+            validate:
+              - required
+        -
+          handle: level
+          field:
+            input_type: text
+            antlers: false
+            display: Level
+            type: text
+            icon: text
+            instructions: 'Native, Proficient, etc.'
+            width: 25
+            listable: hidden
+            instructions_position: above
+            read_only: false
+      mode: table
+      reorderable: true
+      display: Languages
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      read_only: false

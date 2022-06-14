@@ -1,0 +1,40 @@
+<section>
+    {{ partial:components.title_with_dot }}
+
+    <div class="grid gap-4 xl:gap-8 xl:grid-cols-2">
+        {{ projects }}
+            <div
+                class="flex flex-col justify-between px-6 py-5 transition duration-700 ease-in-out bg-gray-100 rounded-md dark:bg-gray-700">
+                <div>
+                    {{ if image }}
+                        <div class="h-40 overflow-hidden rounded lg:h-32 xl:w-40">
+                            {{ partial:components/picture :image="image" cover="true" }}
+                        </div>
+                    {{ /if }}
+
+                    <div class="flex flex-col my-4">
+                        <div class="mb-2 text-xl font-medium text-gray-800 dark:text-gray-200">
+                            {{ title }}
+                        </div>
+                        {{ if description }}
+                            <div class="prose prose-p:text-sm prose-p:text-gray-600 dark:prose-p:text-gray-300">
+                                {{ description }}
+                            </div>
+                        {{ /if }}
+                    </div>
+                </div>
+
+                {{ if link }}
+                    <a href="{{ link }}" class="flex items-center">
+                        <span class="p-2 rounded-full bg-secondary-200 dark:bg-secondary-500">
+                            {{ svg src="link" class="w-5 h-5 rounded-full fill-current text-secondary-400 dark:text-secondary-300" }}
+                        </span>
+                        <span class="pl-3 text-xs font-medium text-secondary-400 dark:text-secondary-300">
+                            Read More
+                        </span>
+                    </a>
+                {{ /if }}
+            </div>
+        {{ /projects }}
+    </div>
+</section>

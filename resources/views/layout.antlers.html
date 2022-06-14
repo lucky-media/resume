@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site:short_locale }}">
+<head>
+    {{ partial:foc_script }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title ?? site:name }}</title>
+    <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}" />
+    <script type="module" src="{{ mix src='/js/site.js' }}" defer></script>
+</head>
+<body class="font-sans leading-normal transition duration-700 ease-in-out bg-white dark:bg-gray-800">
+    <div class="container relative py-10">
+        {{ partial:components/darkmode_toggle }}
+
+        {{ template_content }}
+    </div>
+</body>
+</html>

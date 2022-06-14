@@ -1,0 +1,29 @@
+<div class="pt-8">
+    {{ partial:components.title }}
+
+    <div class="mt-6 space-y-6">
+        {{ social_media }}
+            <a class="flex flex-row items-center" href="{{ link }}">
+                <div class="w-8 h-8 mr-4">
+                    {{ iconamic:icon }}
+                </div>
+                <div>
+                    {{ if social }}
+                        <span
+                            class="text-sm font-medium text-gray-600 dark:text-gray-400">
+                            {{ social }}
+                        </span>
+                    {{ /if }}
+
+                    {{ if social_username }}
+                        <p
+                            class="text-xl font-medium text-gray-700 transition duration-200 ease-in-out dark:text-gray-300 dark:hover:text-primary-400 hover:text-primary-400">
+                            {{ social_username }}
+                        </p>
+                    {{ /if }}
+                </div>
+
+            </a>
+        {{ /social_media }}
+    </div>
+</div>

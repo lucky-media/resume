@@ -1,0 +1,61 @@
+<section>
+    {{ partial:components.title_with_dot }}
+
+    <div class="space-y-9">
+        {{ items }}
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <div class="flex items-center">
+                        {{ svg src="calendar" class="w-5 h-5 mr-1 text-gray-600 fill-current dark:text-gray-400" }}
+                        {{ if start_date && end_date }}
+                            <span
+                                class="font-medium text-gray-600 dark:text-gray-400">
+                                {{ start_date iso_format="MMM DD" }}
+                                -
+                                {{ end_date iso_format="MMM YYYY" }}
+                            </span>
+                        {{ /if }}
+                    </div>
+
+                    {{ if location }}
+                        <div class="flex items-center ml-5">
+                            {{ svg src="address" class="w-5 h-5 mr-1 text-gray-600 fill-current dark:text-gray-400" }}
+                            <p class="font-medium text-gray-600 dark:text-gray-400">
+                                {{ location }}
+                            </p>
+                        </div>
+                    {{ /if }}
+                </div>
+
+                <div class="flex items-center">
+                    {{ if logo }}
+                        <div class="w-10 h-10 overflow-hidden rounded-md shrink-0">
+                            {{ partial:components/picture :image="logo" cover="true" }}
+                        </div>
+                    {{ /if }}
+
+                    <div class="ml-2">
+                        {{ if employer }}
+                            <p class="text-sm font-medium text-gray-600 dark:text-gray-400 ">
+                                {{ employer }}
+                            </p>
+                        {{ /if }}
+
+                        <p class="text-xl font-medium text-gray-800 dark:text-gray-200">
+                            {{ job_title }}
+                        </p>
+                    </div>
+                </div>
+
+                {{ if description }}
+                    <div class="md:max-w-xl">
+                        <div
+                            class="prose prose-p:text-gray-600 dark:prose-p:text-gray-400 prose-a:text-primary-500 dark:prose-a:text-primary-300 max-w-none">
+                            {{ description }}
+                        </div>
+                    </div>
+                {{ /if }}
+            </div>
+        {{ /items }}
+    </div>
+</section>
