@@ -39,9 +39,8 @@ statamic new my-site lucky-media/resume
 
 ## Styling
 The design of Résumé is done entirely with TailwindCSS. Because we follow the primary/secondary naming convention making changes is very easy and straight forward. All you have to do is edit the `tailwind.config.js` file.
-
-* Font Family - default is: DM Sans.
-* Colors - easily to change as we use primary/secondary naming conventions.
+  * Font Family - default is: DM Sans.
+  * Colors - easily to change as we use primary/secondary naming conventions.
 
 ## Fonts
 For fonts we use [Fontsource](https://fontsource.org/) to self host them. In order to change the default font please follow these steps:

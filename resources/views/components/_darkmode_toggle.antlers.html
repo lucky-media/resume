@@ -1,5 +1,5 @@
 <div x-data="darkMode" class="absolute z-10 right-5 top-5">
-    <button @click="toggle" class="block" type="button" x-cloak>
+    <button id="darkModebtn" @click="toggle" class="block w-6 h-6" type="button" x-cloak>
         <span x-show="!enabled" x-cloak x-transition>
             {{ svg src="moon" class="w-6 h-6 fill-current text-primary-600 dark:text-white" }}
         </span>
