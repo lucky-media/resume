@@ -54,12 +54,12 @@ For fonts we use [Fontsource](https://fontsource.org/) to self host them. In ord
 More info on the [official documentation of Font Source](https://fontsource.org/docs/introduction).
 
 ## Compiling Assets
-By default we make use of Laravel Mix to compile all the assets. Make sure to run the following commands after installing the starter-kit.
+By default we make use of Vite with [Laravel](https://laravel.com/docs/9.x/vite) to compile all the assets.
+Make sure to run the following commands after installing the starter-kit.
 
 * `npm install` - to install all the required dependencies.
 * `npm run dev` - to run in development mode.
-* `npm run watch` - to run in development with hot reload.
-* `npm run production` - to compile assets for production.
+* `npm run build` - to compile assets for production.
 
 ## 🐞 Bugs and 💡 Feature Requests
 Please refer to the issues tab to submit a Bug or a Feature Request.
