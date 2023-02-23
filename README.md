@@ -61,6 +61,9 @@ Make sure to run the following commands after installing the starter-kit.
 * `npm run dev` - to run in development mode.
 * `npm run build` - to compile assets for production.
 
+## Commercial addon
+Résumé is a commercial starter kit - you **must purchase a license** via the [Statamic Marketplace](https://statamic.com/starter-kits/luckymedia/resume) to use it in your project.
+
 ## 🐞 Bugs and 💡 Feature Requests
 Please refer to the issues tab to submit a Bug or a Feature Request.
 
