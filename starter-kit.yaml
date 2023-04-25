@@ -21,6 +21,7 @@ export_paths:
   - package.json
   - tailwind.config.js
   - vite.config.js
+  - postcss.config.js
   - README.md
 dependencies:
   mitydigital/iconamic: ^1.0
