@@ -1,289 +1,310 @@
 title: Resume
-sections:
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-          display: 'Name & Surname'
-          instructions_position: above
-          listable: hidden
-          read_only: false
-          input_type: text
-          antlers: false
+        display: 'Personal Details'
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: 'Name & Surname'
+              instructions_position: above
+              listable: hidden
+              input_type: text
+              antlers: false
+          -
+            handle: image
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: Image
+              type: assets
+              icon: assets
+              instructions: 'Image shown in the top left corner'
+              listable: hidden
+              instructions_position: above
+          -
+            handle: short_bio
+            field:
+              antlers: false
+              display: 'Short Bio'
+              type: textarea
+              icon: textarea
+              instructions: 'You can also use markdown here.'
+              listable: hidden
+              instructions_position: above
       -
-        handle: personal_details
-        field:
-          display: 'Personal Details'
-          type: section
-          icon: section
-          listable: hidden
-          instructions_position: above
-          read_only: false
+        display: 'Sidebar Section'
+        fields:
+          -
+            handle: sections
+            field:
+              collapse: accordion
+              sets:
+                main:
+                  display: Main
+                  instructions: null
+                  icon: null
+                  sets:
+                    personal_details:
+                      display: 'Personal Details'
+                      instructions: null
+                      icon: user-avatar
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            default: 'Personal Details'
+                            display: Title
+                            type: text
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                        -
+                          handle: details
+                          field:
+                            fields:
+                              -
+                                handle: icon
+                                field:
+                                  options:
+                                    email: Email
+                                    website: Website
+                                    phone: Phone
+                                    address: Address
+                                  multiple: false
+                                  clearable: false
+                                  searchable: true
+                                  taggable: false
+                                  push_tags: false
+                                  cast_booleans: false
+                                  display: Icon
+                                  type: select
+                                  icon: select
+                                  width: 25
+                                  listable: hidden
+                                  instructions_position: above
+                                  read_only: false
+                                  validate:
+                                    - required
+                              -
+                                handle: field_value
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  display: 'Field Value'
+                                  type: text
+                                  icon: text
+                                  width: 75
+                                  listable: hidden
+                                  instructions_position: above
+                                  read_only: false
+                            mode: table
+                            reorderable: true
+                            display: Details
+                            type: grid
+                            icon: grid
+                            listable: hidden
+                            instructions_position: above
+                    social_media:
+                      display: 'Social Media'
+                      instructions: null
+                      icon: globe-world-wide-web
+                      fields:
+                        -
+                          import: social_media
+                    languages:
+                      display: Languages
+                      instructions: null
+                      icon: text-formatting-shadow-text
+                      fields:
+                        -
+                          import: languages
+                    hobbies:
+                      display: Hobbies
+                      instructions: null
+                      icon: media-ticket
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            display: Title
+                            type: text
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                        -
+                          handle: hobbies
+                          field:
+                            display: Hobbies
+                            type: list
+                            icon: list
+                            listable: hidden
+                            instructions_position: above
+              display: 'Sidebar Sections'
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              previews: true
+              hide_display: false
       -
-        handle: image
-        field:
-          mode: list
-          container: assets
-          restrict: false
-          allow_uploads: true
-          show_filename: true
-          max_files: 1
-          display: Image
-          type: assets
-          icon: assets
-          instructions: 'Image shown in the top left corner'
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
-        handle: short_bio
-        field:
-          antlers: false
-          display: 'Short Bio'
-          type: textarea
-          icon: textarea
-          instructions: 'You can also use markdown here.'
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
-        handle: sections
-        field:
-          collapse: accordion
-          sets:
-            personal_details:
-              display: 'Personal Details'
-              fields:
-                -
-                  handle: title
-                  field:
-                    input_type: text
-                    antlers: false
-                    default: 'Personal Details'
-                    display: Title
-                    type: text
-                    icon: text
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  handle: details
-                  field:
-                    fields:
-                      -
-                        handle: icon
-                        field:
-                          options:
-                            email: Email
-                            website: Website
-                            phone: Phone
-                            address: Address
-                          multiple: false
-                          clearable: false
-                          searchable: true
-                          taggable: false
-                          push_tags: false
-                          cast_booleans: false
-                          display: Icon
-                          type: select
-                          icon: select
-                          width: 25
-                          listable: hidden
-                          instructions_position: above
-                          read_only: false
-                          validate:
-                            - required
-                      -
-                        handle: field_value
-                        field:
-                          input_type: text
-                          antlers: false
-                          display: 'Field Value'
-                          type: text
-                          icon: text
-                          width: 75
-                          listable: hidden
-                          instructions_position: above
-                          read_only: false
-                    mode: table
-                    reorderable: true
-                    display: Details
-                    type: grid
-                    icon: grid
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-            social_media:
-              display: 'Social Media'
-              fields:
-                -
-                  import: social_media
-            languages:
-              display: Languages
-              fields:
-                -
-                  import: languages
-            hobbies:
-              display: Hobbies
-              fields:
-                -
-                  handle: title
-                  field:
-                    input_type: text
-                    antlers: false
-                    display: Title
-                    type: text
-                    icon: text
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  handle: hobbies
-                  field:
-                    display: Hobbies
-                    type: list
-                    icon: list
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-          display: 'Sidebar Sections'
-          type: replicator
-          icon: replicator
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
-        handle: resume_section
-        field:
-          display: 'Resume Section'
-          type: section
-          icon: section
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
-        handle: resume_builder
-        field:
-          collapse: accordion
-          sets:
-            experience:
-              display: Experience
-              fields:
-                -
-                  handle: title
-                  field:
-                    input_type: text
-                    antlers: false
-                    default: Experience
-                    display: Title
-                    type: text
-                    icon: text
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  import: experience_section
-            education:
-              display: Education
-              fields:
-                -
-                  handle: title
-                  field:
-                    input_type: text
-                    antlers: false
-                    default: Education
-                    display: Title
-                    type: text
-                    icon: text
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  import: education_section
-            projects:
-              display: Projects
-              fields:
-                -
-                  handle: title
-                  field:
-                    input_type: text
-                    antlers: false
-                    default: Projects
-                    display: Title
-                    type: text
-                    icon: text
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  import: projects_section
-            skills:
-              display: Skills
-              fields:
-                -
-                  handle: title
-                  field:
-                    input_type: text
-                    antlers: false
-                    default: Skills
-                    display: Title
-                    type: text
-                    icon: text
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  handle: skills
-                  field:
-                    display: Skills
-                    type: list
-                    icon: list
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                    validate:
-                      - required
-            courses:
-              display: Courses
-              fields:
-                -
-                  import: courses_section
-          display: 'Resume Builder'
-          type: replicator
-          icon: replicator
-          listable: hidden
-          instructions_position: above
-          read_only: false
+        display: 'Resume Builder'
+        fields:
+          -
+            handle: resume_builder
+            field:
+              collapse: accordion
+              sets:
+                main:
+                  display: Main
+                  instructions: null
+                  icon: null
+                  sets:
+                    experience:
+                      display: Experience
+                      instructions: null
+                      icon: file-content-list
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            default: Experience
+                            display: Title
+                            type: text
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                        -
+                          import: experience_section
+                    education:
+                      display: Education
+                      instructions: null
+                      icon: presentation-board
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            default: Education
+                            display: Title
+                            type: text
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                        -
+                          import: education_section
+                    projects:
+                      display: Projects
+                      instructions: null
+                      icon: layout-carousel-horizontal
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            default: Projects
+                            display: Title
+                            type: text
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                        -
+                          import: projects_section
+                    skills:
+                      display: Skills
+                      instructions: null
+                      icon: favorite-star
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            default: Skills
+                            display: Title
+                            type: text
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                        -
+                          handle: skills
+                          field:
+                            display: Skills
+                            type: list
+                            icon: list
+                            listable: hidden
+                            instructions_position: above
+                            validate:
+                              - required
+                    courses:
+                      display: Courses
+                      instructions: null
+                      icon: favorite-award
+                      fields:
+                        -
+                          import: courses_section
+              display: 'Resume Builder'
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              previews: true
+              hide_display: false
   sidebar:
     display: Sidebar
-    fields:
+    sections:
       -
-        handle: slug
-        field:
-          type: slug
-          localizable: true
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: template
+            field:
+              default: resume/show
+              display: Template
+              type: hidden
+              icon: hidden
+              listable: hidden
+              instructions_position: above
+  seo:
+    display: SEO
+    sections:
       -
-        handle: parent
-        field:
-          type: entries
-          collections:
-            - pages
-          max_items: 1
-          listable: false
-          localizable: true
-      -
-        handle: template
-        field:
-          default: resume/show
-          display: Template
-          type: hidden
-          icon: hidden
-          listable: hidden
-          instructions_position: above
-          read_only: false
+        display: SEO
+        instructions: 'Per page seo configuration'
+        fields:
+          -
+            import: seo
