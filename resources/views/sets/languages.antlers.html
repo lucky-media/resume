@@ -5,12 +5,11 @@
             <div class="flex items-center">
                 {{ if icon }}
                     <div class="w-8 h-8 mr-4 overflow-hidden rounded-full">
-                        {{ iconamic:icon }}
+                        {{ icon }}
                     </div>
                 {{ /if }}
                 <div class="flex flex-col justify-center">
                     <p class="text-xl font-medium text-gray-700 dark:text-gray-300">{{ name }}</p>
-
                     {{ if level }}
                         <p class="text-sm font-medium text-gray-600 dark:text-gray-400">{{ level }}</p>
                     {{ /if }}

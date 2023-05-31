@@ -1,12 +1,15 @@
 title: Pages
 sections:
   main:
+    display: Main
     fields:
       -
         handle: title
         field:
           type: text
           required: true
+          validate:
+            - required
       -
         handle: content
         field:
@@ -28,6 +31,7 @@ sections:
           display: Template
           localizable: true
   sidebar:
+    display: Sidebar
     fields:
       -
         handle: slug
@@ -43,3 +47,8 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo

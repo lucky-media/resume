@@ -4,7 +4,6 @@ export_paths:
   - content/collections/pages.yaml
   - content/trees/collections/pages.yaml
   - config/statamic/assets.php
-  - config/statamic/antlers.php
   - resources/blueprints
   - resources/fieldsets
   - resources/css/tailwind.css
@@ -23,5 +22,3 @@ export_paths:
   - vite.config.js
   - postcss.config.js
   - README.md
-dependencies:
-  mitydigital/iconamic: ^1.0
