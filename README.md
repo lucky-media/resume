@@ -23,7 +23,7 @@ Resume comes as a Statamic starter kit which will help you quickly generate a re
 
 ## Installation
 To install Résumé, follow the [Installing a starter kit](https://statamic.dev/starter-kits/installing-a-starter-kit). 
-Note that you will need to be running **Statamic 3.3+**.
+Note that you will need to be running **Statamic 4.x**.
 
 ### Installing into an existing site
 ```
