@@ -1,0 +1,8 @@
+title: SEO
+data:
+  sitename: Résumé
+  meta_description: 'Meta Description'
+  display_og_tags: true
+  display_twitter_tags: true
+  sitemap_change_frequency: weekly
+  sitemap_priority: 0.5
