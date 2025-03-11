@@ -1,8 +1,10 @@
 export_paths:
+  - app/Tags/LuckySeo.php
   - content/assets
   - content/collections/pages/john-doe.md
   - content/collections/pages.yaml
   - content/trees/collections/pages.yaml
+  - content/globals
   - config/statamic/assets.php
   - resources/sites.yaml
   - resources/blueprints
