@@ -1,8 +1,57 @@
-@import "tailwindcss/base";
+@import 'tailwindcss';
+@source "../views";
+@import "./plugins.css";
 
-@import "tailwindcss/components";
+@custom-variant dark (&:is(.dark *));
 
-@import "tailwindcss/utilities";
+@theme {
+    --font-sans: DM Sans;
+
+    --color-primary-100: #f8f2fc;
+    --color-primary-200: #efe2f9;
+    --color-primary-300: #c696fc;
+    --color-primary-400: #9251f7;
+    --color-primary-450: #a478e8;
+    --color-primary-500: #5531a7;
+    --color-primary-600: #312163;
+    --color-primary-700: #170f2e;
+
+    --color-secondary-100: #f5f7ff;
+    --color-secondary-200: #e1e7fe;
+    --color-secondary-300: #95aafb;
+    --color-secondary-400: #516cf7;
+    --color-secondary-500: #2a337e;
+    --color-secondary-600: #1f2347;
+
+    --color-gray-100: #f7f9fc;
+    --color-gray-200: #e2e6ee;
+    --color-gray-300: #d9dfe8;
+    --color-gray-400: #acb1c3;
+    --color-gray-500: #79819a;
+    --color-gray-600: #47516b;
+    --color-gray-700: #2e2e48;
+    --color-gray-800: #232339;
+}
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
 
 [x-cloak] {
     display: none !important;
