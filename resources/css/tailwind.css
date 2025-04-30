@@ -48,11 +48,12 @@
         border-color: var(--color-gray-200, currentColor);
     }
 
-    button {
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
         cursor: pointer;
     }
-}
 
-[x-cloak] {
-    display: none !important;
+    [x-cloak] {
+        display: none !important;
+    }
 }
