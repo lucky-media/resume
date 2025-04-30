@@ -8,7 +8,7 @@
     {{ partial:seo }}
     {{ vite src="resources/css/tailwind.css|resources/js/site.js" }}
 </head>
-<body class="font-sans leading-normal transition duration-700 ease-in-out bg-white dark:bg-gray-800">
+<body class="font-sans leading-normal transition duration-700 ease-in-out bg-white dark:bg-gray-800 {{ environment === 'local' ?= 'debug-screens' }}">
     <div class="container relative py-10">
         {{ partial:components/darkmode_toggle }}
 
