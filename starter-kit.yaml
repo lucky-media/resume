@@ -10,6 +10,7 @@ export_paths:
   - resources/blueprints
   - resources/fieldsets
   - resources/css/tailwind.css
+  - resources/css/plugins.css
   - resources/js/site.js
   - resources/icons
   - resources/views/components
@@ -21,7 +22,5 @@ export_paths:
   - public/build
   - public/svg
   - package.json
-  - tailwind.config.js
   - vite.config.js
-  - postcss.config.js
   - README.md
